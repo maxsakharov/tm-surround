@@ -1,0 +1,167 @@
+#map {
+    z-index: 0;
+}
+
+body {
+    color: white;
+    margin: 0px;
+    background: #1e212f;
+    font-family:"Trebuchet MS";
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+div.top {
+    position: fixed;
+    top: 0px;
+    height: 70px;
+    width: 100%;
+    background: #1e212f;
+    border-bottom: 2px solid white;
+    z-index: 2;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.top img.logo {
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+div.top img.title {
+    height: 35px;
+    margin-top: 18px;
+    margin-left: 0px;
+}
+
+div.bottom {
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+    background: #1e212f;
+    border-top: 2px solid white;
+    z-index: 2;
+    vertical-align: bottom;
+    line-height: 70px;
+}
+
+div.filters {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+#controls {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 3;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+#action_icons {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 3;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    height: 50px;
+}
+
+#action_icons img {
+    width: 50px;
+    height: 50px;
+    line-height: 70px;
+    vertical-align: middle;
+}
+
+#controls img {
+    width: 40px;
+    height: 40px;
+    line-height: 70px;
+    vertical-align: middle;
+}
+
+#controls img:hover, img.logo, img.title, input[type=button]:hover, #action_icons {
+    cursor: pointer;
+}
+
+#artist, #song, #album {
+    font-size: 13px;
+}
+
+#equalizers {
+    width: 75px;
+    display: inline-block
+}
+
+/** design for inputs & components */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+}
+
+#event_link_content {
+    color: #3a75db;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+#event_link_content:visited {
+    color: white;
+}
+
+#info {
+    opacity: 0.8;
+    background: #1e212f;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid white;
+    width: 200px;
+}
+
+#price {
+    position: absolute;
+    bottom: 23px;
+    right: 34px;
+    color: #1e212f;
+    z-index: 4;
+    font-size: 10px;
+}
+
+input {
+    outline:none;
+}
+
+input[type=text] {
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #1e212f;
+    color: #ffffff;
+    padding-left: 10px;
+    height: 25px;
+}
+
+input[type=text]:focus {
+    border: 2px solid #3a75db;
+}
+
+input[type=button] {
+    border: 3px solid white;
+    border-radius: 10px;
+    background: #1e212f;
+    color: #ffffff;
+    height: 30px;
+    font-weight: bold;
+}
+
+input[type=button]:active {
+    color: #3a75db;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tmsurround</title>
+
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="static/images/logo-dark.png" />
+
+    <script type="text/javascript" src="https://embed.ticketmaster.com/tm.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoAfnXXfsB5g1nTPSfQYHWAdb92JdZvOM"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+    <script type="text/javascript" src="js/music.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+    <div class="top">
+        <img class="logo" src="static/images/logo.png"/>
+        <img class="title" src="static/images/title.png"/>
+
+        <div class="filters">
+            <input type="text" placeholder="key word" id="keyword" value=""/>
+            <input type="text" placeholder="location" id="location" value="los angeles"/>
+            <input type="text" placeholder="distance" id="distance"/>
+            <input type="text" placeholder="period" id="period"/>
+            <input type="button" id="go" value="&#9658; explore">
+            <input type="button" id="my_location" value="&#10687; home">
+        </div>
+    </div>
+    <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+    <div id="map"></div>
+
+    <div class="bottom"></div>
+
+
+    <table id="controls">
+        <tr>
+            <td>
+                <span>
+                    <img id="prev_button" class="with-hover-image" src="static/images/prev.png"
+                         hover="static/images/prev-hover.png"
+                         normal="static/images/prev.png"/>
+                </span>
+                <span>
+                    <input type="hidden" id="is_playing" value="false"/>
+                    <img id="play_button" class="with-hover-image play" src="static/images/play.png"
+                         hover="static/images/play-hover.png"
+                         normal="static/images/play.png"/>
+                </span>
+                <span>
+                    <img id="next_button" class="with-hover-image" src="static/images/next.png"
+                         hover="static/images/next-hover.png"
+                         normal="static/images/next.png"/>
+                </span>
+            </td>
+            <td>
+                <span id="equalizers" style="margin-left: 35px">
+                    <img src="static/images/eqalizer.gif" style="display:none"/>
+                </span>
+            </td>
+            <td align="left">
+                <div id="song_title" style="display: none;">
+                    <span id="artist">Artist</span>
+                    - <span id="song">Song</span>
+                    [<span id="album">Album</span>]
+                </div>
+                <div>
+                    <span id="visit">
+                    <a class="eventLink" id="event_link" target="_blank" href="" style="display: none">
+                        Visit at: <span id="event_link_content"></span>
+                    </a>
+                </span>
+                <!--<a href="https://ticketmaster.evyy.net" >link</a>-->
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <div id="info" style="position: absolute; top: 85px; right: -300px">
+
+    </div>
+
+    <table id="action_icons">
+        <tr>
+            <td><img id="like" src="static/images/heart-empty.png"/></td>
+            <td>
+                <a id="ticket_icon" target="_blank" href="" class="eventLink">
+                    <img id="buy_ticket" style="width: 95px; height: 40px" src="static/images/ticket-hor.png"/>
+                    <div id="price"></div>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <!--<div class="controls">-->
+
+
+
+
+
+        <!--<span id="song_title" style="display:none; border: 2px solid red">-->
+            <!--<span id="artist">Artist</span>-->
+            <!-- - <span id="song">Song</span>-->
+            <!--[<span id="album">Album</span>]-->
+            <!--<span style="display: table-cell">-->
+                 <!--<span id="visit" style="margin-left: 50px">-->
+                    <!--<a id="event_link" target="_blank" href="" style="display: none">-->
+                        <!--Visit at: <span id="event_link_content"></span>-->
+                    <!--</a>-->
+                <!--</span>-->
+            <!--</span>-->
+        <!--</span>-->
+
+
+    </div>
+</body>
+</html>

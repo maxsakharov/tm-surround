@@ -1,0 +1,9 @@
+# directories
+node_modules/**
+dist/**
+
+# files
+npm-debug.log
+
+# other
+.keys
